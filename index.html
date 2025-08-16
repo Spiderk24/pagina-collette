@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>pasteleria collette</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactos</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F6P5G1BECZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F6P5G1BECZ');
-</script>
 </head>
 <body>
- <header>
+    <header>
      <nav>
          <ul>
         <li><a href="inicio.html">inicio</a></li>
@@ -24,21 +16,32 @@
          </ul>
     </nav>
 </header>   
-<main>
-    <section class="productos">
-        
-        <img src="68684.jpg" alt="logocollette" class="logo">
-    </section>
-    <section>
-    </section>
-    <div class="fotos">
-    <img src="68576.jpg" alt="imgpastel1" class="pastel">
-    <img src="71156.jpg" alt="imgpastel2" class="pastel">
-    <img src="pastel.jpg" alt="imgpastel3" class="pastel">
-    </div>    
-</main>    
-<footer>
-    <span>Creado por Gerardo,Juan Felipe,Alberto Mario Guerrero</span>
-</footer>    
+<div class="form-container">
+    <h2>Formulario de contacto</h2>    
+<form>
+<div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+</div>
+
+<div class="form-group">
+    <label for="telefono">Telefono:</label>
+    <input type="text" id="telefono" name="telefono" required>
+</div>
+
+<div class="form-group">
+    <label for="direccion">Direccion:</label>
+    <input type="text" id="direccion" name="direccion" required>
+</div>
+
+<div class="form-group">
+    <label for="mensaje">Mensaje:</label>
+    <textarea type="text" id="mensaje" name="mensaje" required></textarea>
+</div>
+<button type="submit">Enviar</button>
+</form>
+</div>
+
 </body>
 </html>
+
