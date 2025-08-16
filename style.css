@@ -1,154 +1,250 @@
-*{
-    margin:0;
-    padding:0;
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-
-html, body{
-    font-family: "Arial", sans-serif;
-    background: white;
-    margin: 0;
-    padding: 0;
-    color: black;
-    text-align: center;
-    height: 100%;
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
-    display: flex; 
-    flex-direction: column; 
-    min-width: 100vh; 
+    font-family: "Arial", sans-serif;
+    background: #fff;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
-header{
+/* Header styles */
+header {
     position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
-    background-color: #FF83D1; 
+    background: linear-gradient(90deg, #FF83D1 60%, #1dddff 100%);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-header nav{
-    background-color: #FF83D1;
-    padding: 10px;
+header nav {
+    padding: 10px 0;
 }
 
-header ul{
+header ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 400px
+    gap: 80px;
+    flex-wrap: wrap;
 }
 
-
-header a{
-    color: black;
-    font-size: 35px;
+header a {
+    color: #222;
+    font-size: 1.6rem;
     font-weight: bold;
-    text-decoration: none; 
-    
+    text-decoration: none;
+    transition: color 0.2s;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    border-radius: 6px;
 }
 
+header a:hover,
+header a:focus {
+    color: #fff;
+    background: #ff83d1;
+    outline: none;
+}
+
+/* Main content */
 main {
-    flex: 1; 
-    padding: 20px; 
+    flex: 1;
+    padding: 2.5rem 1rem 1rem 1rem;
 }
 
-.productos h2 {
-    font-size: 28px; 
-    margin-bottom: 15px; 
+.logo-section {
+    margin: 2.5rem 0 1.5rem 0;
+}
+.logo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(255,131,209,.18);
 }
 
-.logo{
-    width: 200px; 
-    height: 220px;
-    margin-top: 100px auto;
-    display: center; 
- 
+.logo-section h1 {
+    font-size: 2.5rem;
+    color: #FF83D1;
+    margin-bottom: 0.5rem;
+}
+.logo-section p {
+    font-size: 1.15rem;
+    color: #333;
+    margin-bottom: 1.5rem;
 }
 
+/* Gallery section */
+.galeria h2 {
+    font-size: 2rem;
+    margin-bottom: 1.3rem;
+    color: #1dddff;
+    letter-spacing: 1px;
+}
 
 .fotos {
-    display: flex; 
-    justify-content: center; 
-    gap: 20px; 
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 30px; 
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
-
-.pastel{
+.pastel {
     width: 320px;
-    height: auto; 
-    border-radius: 15px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4)
+    max-width: 90vw;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #fafaff;
+}
+.pastel:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 28px rgba(255,131,209,0.20);
 }
 
-footer {
-    background-color: #1dddff; 
-    padding: 15px; 
-    font-weight: bold; 
-    font-size: 18px; 
-    
-}
-
-.form-container{
+/* Form styles */
+.form-container {
     background: #fff;
-    padding: 25px;
-    max-width: 500px;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 2rem;
+    max-width: 480px;
+    margin: 2.5rem auto;
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.10);
 }
 
-.form-container h2{
-    margin-bottom: 15px;
-    color: #333;
+.form-container h2 {
+    margin-bottom: 1.1rem;
+    color: #1dddff;
 }
 
-.form-group{
-    margin-bottom: 15px;
-    text-align: left; 
+.form-group {
+    margin-bottom: 1.1rem;
+    text-align: left;
 }
 
-.form-group label{
+.form-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.4rem;
     font-weight: bold;
 }
 
 .form-group input,
-.form-group textarea{
+.form-group textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fafaff;
+    transition: border-color 0.2s, background 0.2s;
 }
 
-textarea{
+textarea {
     resize: none;
+    min-height: 90px;
 }
 
-button{
-    background-color: #ff83d1;
+button {
+    background: linear-gradient(90deg, #ff83d1 80%, #1dddff 100%);
     color: #fff;
-    padding: 10px 20px;
+    padding: 0.7rem 2rem;
     border: none;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer; 
+    font-size: 1.08rem;
+    font-weight: bold;
+    border-radius: 9px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255,131,209,.11);
+    transition: background 0.25s, box-shadow 0.18s;
 }
-button:hover{
-    background-color: #e272bd;
+button:hover,
+button:focus {
+    background: linear-gradient(90deg, #e272bd 80%, #1dbadf 100%);
+    box-shadow: 0 4px 16px rgba(255,131,209,.18);
 }
 
 .form-group input:focus,
-.form-group textarea:focus{
-    background-color: #ffe4f2;
+.form-group textarea:focus {
+    background: #ffe4f2;
     border-color: #ff83d1;
+    outline: none;
 }
 
+/* Footer styles */
+footer {
+    background: linear-gradient(90deg, #1dddff 60%, #FF83D1 100%);
+    color: #222;
+    padding: 1.1rem 0;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    margin-top: auto;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.06);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    header ul {
+        gap: 40px;
+    }
+    .fotos {
+        gap: 1rem;
+    }
+    .pastel {
+        width: 220px;
+        height: 145px;
+    }
+}
+
+@media (max-width: 600px) {
+    header nav {
+        padding: 7px 0;
+    }
+    header ul {
+        gap: 16px;
+    }
+    header a {
+        font-size: 1.1rem;
+        padding: 7px 10px;
+    }
+    .logo-section h1 {
+        font-size: 1.5rem;
+    }
+    .galeria h2 {
+        font-size: 1.2rem;
+    }
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+    .pastel {
+        width: 120px;
+        height: 80px;
+    }
+    .form-container {
+        padding: 1.2rem;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
