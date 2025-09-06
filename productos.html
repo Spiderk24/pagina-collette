@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>pasteleria collette</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-
-        img{
-            height: 100vh;
-            width: 100vw;
-            display: block;
-        }
-        </style>
-</head>
-<body>
-<img src="2.png" alt="cumpleaños">      
-</body>
+      body{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FF83D1;
+      }
+      .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
+      padding: 20px;
+    }
+.galeria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.galeria img:hover{
+    transform:scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    filter:brightness(1.1)
+}
+    </style>
+  </head>
+  <body>
+    <div class="galeria">
+      <img src="68576.jpg" alt="pastel1" />
+      <img src="68684.jpg" alt="pastel2" />
+      <img src="70935.jpg" alt="pastel3" />
+      <img src="71156.jpg" alt="pastel4" />
+      <img src="71461.jpg" alt="pastel5" />
+      <img src="1000006010.jpg" alt="pastel6" />
+      <img src="IMG_20220506_093853.jpg" alt="pastel7" />
+      <img src="IMG_20220510_090801.jpg" alt="pastel8" /> 
+      <img src="IMG_20220510_094416.jpg" alt="pastel9" />
+      <img src="IMG_20220618_130020.jpg" alt="pastel10" />
+      <img src="pastel.jpg" alt="pastel11" />
+      <img src="70936.jpg" alt="pastel12" />
+      <img src="71029.jpg" alt="pastel13" />
+      <img src="71690.jpg" alt="pastel14" />
+      <img src="IMG_0164.JPEG" alt="pastel15" />
+    </div>
+  </body>
 </html>
