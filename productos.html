@@ -1,59 +1,142 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>pasteleria collette</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      body{
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #FF83D1;
-      }
-      .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-      max-width: 1000px;
-      padding: 20px;
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastelería Collette</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ff66cc; /* rosado */
     }
-.galeria img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+    header {
+      background: #ff1493; /* fucsia fuerte */
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--rosa); 
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.galeria img:hover{
-    transform:scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    filter:brightness(1.1)
+header nav {
+    padding: 10px;
 }
-    </style>
-  </head>
-  <body>
-    <div class="galeria">
-      <img src="68576.jpg" alt="pastel1" />
-      <img src="68684.jpg" alt="pastel2" />
-      <img src="70935.jpg" alt="pastel3" />
-      <img src="71156.jpg" alt="pastel4" />
-      <img src="71461.jpg" alt="pastel5" />
-      <img src="1000006010.jpg" alt="pastel6" />
-      <img src="IMG_20220506_093853.jpg" alt="pastel7" />
-      <img src="IMG_20220510_090801.jpg" alt="pastel8" /> 
-      <img src="IMG_20220510_094416.jpg" alt="pastel9" />
-      <img src="IMG_20220618_130020.jpg" alt="pastel10" />
-      <img src="pastel.jpg" alt="pastel11" />
-      <img src="70936.jpg" alt="pastel12" />
-      <img src="71029.jpg" alt="pastel13" />
-      <img src="71690.jpg" alt="pastel14" />
-      <img src="IMG_0164.JPEG" alt="pastel15" />
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* antes 400px */
+    flex-wrap: wrap;
+}
+header a {
+    color: var(--texto);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none; 
+}
+header a:hover {
+    text-decoration: underline;
+}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+      gap: 20px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .item {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .item img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .precio {
+      grid-column: 3; /* columna central */
+      background: white;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    .precio h2 {
+      margin-top: 0;
+      color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <header>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+  <main class="grid">
+    <!-- Fila 1 -->
+    <div class="item"><img src="68576.jpg" alt="Pastel 1"><p>Pastel 1</p></div>
+    <div class="item"><img src="68684.jpg" alt="Pastel 2"><p>Pastel 2</p></div>
+    <div class="precio">
+      <h2>Lista de Precios</h2>
+      <p>Pastel 1 - $20</p>
+      <p>Pastel 2 - $25</p>
+      <p>Pastel 3 - $30</p>
+      <p>Pastel 4 - $22</p>
+      <p>Pastel 5 - $28</p>
     </div>
-  </body>
+    <div class="item"><img src="70935.jpg" alt="Pastel 3"><p>Pastel 3</p></div>
+    <div class="item"><img src="71156.jpg" alt="Pastel 4"><p>Pastel 4</p></div>
+    <!-- Fila 2 -->
+    <div class="item"><img src="71461.jpg" alt="Pastel 5"><p>Pastel 5</p></div>
+    <div class="item"><img src="1000006010.jpg" alt="Pastel 6"><p>Pastel 6</p></div>
+    <div class="precio">
+      <h2>Promociones</h2>
+      <p>Combo 1: 2x $40</p>
+      <p>Combo 2: 3x $60</p>
+    </div>
+    <div class="item"><img src="IMG_20220506_093853.jpg" alt="Pastel 7"><p>Pastel 7</p></div>
+    <div class="item"><img src="IMG_20220510_090801.jpg" alt="Pastel 8"><p>Pastel 8</p></div>
+    <!-- Fila 3 -->
+    <div class="item"><img src="IMG_20220510_094416.jpg" alt="Pastel 9"><p>Pastel 9</p></div>
+    <div class="item"><img src="IMG_20220618_130020.jpg" alt="Pastel 10"><p>Pastel 10</p></div>
+    <div class="precio">
+      <h2>Especiales</h2>
+      <p>Pastel de Chocolate - $35</p>
+      <p>Pastel de Fresa - $32</p>
+      <p>Pastel de Vainilla - $30</p>
+    </div>
+    <div class="item"><img src="pastel.jpg" alt="Pastel 11"><p>Pastel 11</p></div>
+    <div class="item"><img src="70936.jpg" alt="Pastel 12"><p>Pastel 12</p></div>
+    <!-- Fila 4 -->
+    <div class="item"><img src="71029.jpg" alt="Pastel 13"><p>Pastel 13</p></div>
+    <div class="item"><img src="71690.jpg" alt="Pastel 14"><p>Pastel 14</p></div>
+    <div class="precio">
+      <h2>Pedidos</h2>
+      <p>Pasteles personalizados desde $40</p>
+      <p>Decoración temática disponible</p>
+    </div>
+    <div class="item"><img src="IMG_0164.JPEG" alt="Pastel 15"><p>Pastel 15</p></div>
+    <div class="item"><img src="IMG_0164.JPEG" alt="Pastel 16"><p>Pastel 16</p></div>
+  </main>
+</body>
 </html>
