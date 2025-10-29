@@ -13,35 +13,88 @@
       gtag('js', new Date());
       gtag('config', 'G-F6P5G1BECZ');
     </script>
+
+    
+    <style>
+    :root{
+      --fucsia: #ff1493;
+      --rosa: #ff66cc;
+      --blanco: #ffffff;
+      --texto: #111;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#fff0f6,#ffe6f3);color:var(--texto)}
+    header{position:sticky;top:0;left:0;background:var(--fucsia);color:var(--blanco);z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,.15)}
+    .container{width:min(94%,1200px);margin:0 auto;padding:12px 8px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:800;font-size:1.1rem;color:inherit;text-decoration:none;display:flex;align-items:center;gap:12px}
+    .brand img{height:36px;display:block}
+
+    #nav-toggle{position:absolute;left:-9999px;opacity:0}
+    .nav-toggle-label{display:none;cursor:pointer;width:44px;height:36px;align-items:center;justify-content:center;border-radius:8px}
+    .nav-toggle-label span{display:block;width:26px;height:3px;background:var(--blanco);border-radius:2px;position:relative}
+    .nav-toggle-label span::before,.nav-toggle-label span::after{content:"";position:absolute;left:0;width:26px;height:3px;background:var(--blanco);border-radius:2px}
+    .nav-toggle-label span::before{top:-8px}
+    .nav-toggle-label span::after{top:8px}
+
+    nav ul{list-style:none;display:flex;gap:24px;align-items:center}
+    nav a{color:var(--blanco);text-decoration:none;font-weight:700;padding:8px 6px;border-radius:6px}
+    nav a:focus,nav a:hover{background:rgba(255,255,255,0.08);outline:none}
+
+    @media (max-width:880px){
+      .nav-toggle-label{display:flex}
+      nav ul{position:absolute;top:100%;right:8px;left:8px;flex-direction:column;gap:8px;background:linear-gradient(180deg,rgba(255,20,147,.98),rgba(255,20,147,.95));padding:12px;border-radius:10px;display:none;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+      #nav-toggle:checked ~ nav ul{display:flex}
+      .container{padding:10px}
+    }
+
+    main{width:min(96%,1200px);margin:18px auto;padding:8px}
+    .logo-section{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px}
+    .logo{max-width:220px;width:40%;height:auto;border-radius:12px;object-fit:cover}
+    .galeria{padding:18px}
+    .fotos{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .pastel{width:calc(33.333% - 12px);max-width:320px;border-radius:10px;object-fit:cover}
+    @media (max-width:880px){
+      .pastel{width:100%}
+    }
+    footer{padding:14px;text-align:center;font-weight:700}
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contactos.html">Contactos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="logo-section">
-            <img src="68684.jpg" alt="Logo Collette" class="logo">
-            <h1>Pastelería Collette</h1>
-            <p>Deliciosos pasteles y postres para toda ocasión.</p>
-        </section>
-        <section class="galeria">
-            <h2>Nuestros Pasteles</h2>
-            <div class="fotos">
-                <img src="68576.jpg" alt="Pastel de chocolate" class="pastel">
-                <img src="71156.jpg" alt="Pastel de vainilla" class="pastel">
-                <img src="pastel.jpg" alt="Pastel decorado" class="pastel">
-            </div>
-        </section>
-    </main>
-    <footer>
-        <span>Creado por Gerardo, Juan Felipe, Alberto Mario Guerrero</span>
-    </footer>
+  <header>
+    <div class="container">
+      <a class="brand" href="inicio.html">Pastelería Collette</a>
+      <input id="nav-toggle" type="checkbox" aria-label="Abrir menú">
+      <label class="nav-toggle-label" for="nav-toggle" aria-hidden="false" title="Abrir menú">
+        <span></span>
+      </label>
+      <nav>
+        <ul>
+          <li><a href="inicio.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="contactos.html">Contactos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="logo-section">
+      <img src="68684.jpg" alt="Logo Collette" class="logo">
+      <h1>Pastelería Collette</h1>
+      <p>Deliciosos pasteles y postres para toda ocasión.</p>
+    </section>
+    <section class="galeria">
+      <h2>Nuestros Pasteles</h2>
+      <div class="fotos">
+        <img src="68576.jpg" alt="Pastel de chocolate" class="pastel">
+        <img src="71156.jpg" alt="Pastel de vainilla" class="pastel">
+        <img src="pastel.jpg" alt="Pastel decorado" class="pastel">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Creado por Gerardo, Juan Felipe, Alberto Mario Guerrero</span>
+  </footer>
 </body>
 </html>
-
